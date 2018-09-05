@@ -15,6 +15,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'posva/vim-vue'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -31,6 +32,7 @@ set encoding=utf-8  "编码
 set fenc=utf-8      "编码
 set mouse=a        "启用鼠标
 set hlsearch        "搜索高亮
+set linespace=12    "行间距
 syntax on    "语法高亮
 
 au BufNewFile,BufRead *.py
@@ -67,15 +69,18 @@ let g:ycm_python_binary_path = 'python'  "jedi模块所在python解释器路径"
 let g:ycm_seed_identifiers_with_syntax = 1  "开启使用语言的一些关键字查询"
 let g:ycm_autoclose_preview_window_after_completion=1 "补全后自动关闭预览窗口"
 "代码跳转：
-nnoremap <leader>] :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <C-]> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "开关YCM
 "let g:ycm_auto_trigger = 0   "turn off
 let g:ycm_auto_trigger = 1   "turn on
 
-:colorscheme material-monokai
+let g:vue_disable_pre_processors = 1
+
+":colorscheme desert
+"colorscheme molokai
+":colorscheme material-monokai
 ":colorscheme skeletor
 ":colorscheme morning
 ":colorscheme Tomorrow
-":colorscheme Tomorrow-Night-Bright
+:colorscheme Tomorrow-Night-Bright
 ":colorscheme Tomorrow-Night-Eighties
-
