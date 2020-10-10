@@ -84,6 +84,8 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 " 在终端启动vim时，共享NERDTree
 let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeWinSize=25
+" 显示隐藏文件
+let NERDTreeShowHidden=1
 map <C-c> "+y
 
 "youcomplete配置
